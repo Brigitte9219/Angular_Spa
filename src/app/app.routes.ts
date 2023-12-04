@@ -1,9 +1,12 @@
 import { Component } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { HomeComponent } from "./components/home/home.component";
+import { AboutComponent } from "./components/about/about.component";
 
-const app_routes: Routes= [
-  {path: 'routePath', component: Component},
-  {path: '**', pathMatch: 'full', redirectTo: ''}
+const APP_ROUTES: Routes= [
+  {path: 'home', component: HomeComponent},
+  {path: 'about', component: AboutComponent},
+  {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
-export const app_routing = RouterModule.forRoot(app_routes);
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
