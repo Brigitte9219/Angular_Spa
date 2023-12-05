@@ -64,6 +64,11 @@ private heroes:Heroe[]=[//Aqui se trae la data de los recursos descargados
     return this.heroes;
   }
 
+
+  getHeroe( idx: number ){
+    return this.heroes[idx];
+  }
+
 }
 
 export interface Heroe{
