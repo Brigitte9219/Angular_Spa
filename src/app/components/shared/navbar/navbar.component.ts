@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  buscarHeroe(termino:string){
+    console.log(termino);
+
+  }
 }
