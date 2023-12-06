@@ -8,7 +8,13 @@ import { HeroesService } from 'src/app/servicios/heroes.service';
   templateUrl: './buscador.component.html',
   styleUrls: ['./buscador.component.css']
 })
+
 export class BuscadorComponent implements OnInit {
+
+  private heroesComponent:HeroesComponent | undefined;
+verHeroe(item: number) {
+this.heroesComponent?.verHeroe(item);
+}
 
   heroes:any[] = []
 
