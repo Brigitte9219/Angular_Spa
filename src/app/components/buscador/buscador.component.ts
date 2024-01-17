@@ -15,7 +15,7 @@ export class BuscadorComponent implements OnInit {
 verHeroe(item: number) {
 this.heroesComponent?.verHeroe(item);
 }
-
+  termino?:string;
   heroes:any[] = []
 
   constructor(private activatedRoute:ActivatedRoute,
@@ -24,7 +24,8 @@ this.heroesComponent?.verHeroe(item);
 
   ngOnInit(){
 this.activatedRoute.params.subscribe( params =>{
-  //console.log(params['termino']);
+  console.log('termino');
+  this.termino = params['termino'];
   this.heroes = this._heroesService.buscarHeroes( params['termino'] );
   console.log(this.heroes);
 })
